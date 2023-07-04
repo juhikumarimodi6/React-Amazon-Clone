@@ -1,0 +1,40 @@
+.header2-container {
+    background-color: #232F3E;
+    color:white;
+    max-height: 39px;
+    display: flex;
+    height:40px;
+}
+
+.nav-left {
+    object-fit: contain;
+    margin:0 20px;
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+
+.hamburger {
+    scale:1.5;
+}
+
+.nav-fill {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    width:auto;
+    flex:1;
+}
+
+.nav-fill-link {
+    margin:10px;
+}
+
+.nav-right {
+    display: flex;
+    border: solid;
+    margin-right: 0px;
+    object-fit: contain;
+
+}
