@@ -22,13 +22,14 @@
     display: flex;
     align-items: center;
     overflow: hidden;
-    white-space: nowrap;
-    width:auto;
-    flex:1;
+    flex-wrap: wrap;
+    margin-right: 2%;
 }
 
 .nav-fill-link {
     margin:10px;
+    color:white;
+    text-decoration: none;
 }
 
 .nav-right {

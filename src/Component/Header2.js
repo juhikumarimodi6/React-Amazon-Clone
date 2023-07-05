@@ -1,7 +1,7 @@
 import React from "react";
 import './Header2.css';
 import { GiHamburgerMenu } from "react-icons/gi";
-
+import HeaderPrime from '../Assets/AmazonPrime/Header2Prime.jpg'
 
 const Header2 = () => {
     const NavMenu = ["Fresh", "Amazon miniTV", "Sell", "Amazon Pay", "Gift Cards", "Buy Again", 
@@ -13,12 +13,12 @@ const Header2 = () => {
                 <GiHamburgerMenu className="hamburger"/><span >All</span>
             </div>
             <div className="nav-fill">
-                {NavMenu.map((item) => {
-                    return<a className="nav-fill-link">{item}</a>
+                {NavMenu.map((item, index) => {
+                    return<a href = "#" className="nav-fill-link" key = {index}>{item}</a>
                 })}
             </div>
             <div className="nav-right">
-                <img src="https://m.media-amazon.com/images/G/31/prime/ACQ/PD23/SWM_400x39._CB600944639_.jpg" alt="prime member" />
+                <img src={HeaderPrime} alt="prime member" />
             </div>
         </div>
     )

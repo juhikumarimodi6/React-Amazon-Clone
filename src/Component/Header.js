@@ -1,9 +1,9 @@
 import React from 'react'
-import AmazonLogo from '../Images/logo1.jpg.png'
+import AmazonLogo from '../Assets/Logo/HeaderLogo.png'
 import SearchIcon from '@mui/icons-material/Search';
 import { TfiLocationPin } from "react-icons/tfi";
-import ShoppingCart from "../Images/shoppingCart.png"
-import Flag from "../Images/Flag.png"
+import ShoppingCart from "../Assets/Logo/shoppingCart.png"
+import Flag from "../Assets/Logo/Flag.png"
 import './Header.css'
 import Header2 from './Header2';
 
