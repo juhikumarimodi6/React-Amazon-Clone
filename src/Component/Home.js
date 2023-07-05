@@ -1,45 +1,16 @@
 import React from 'react'
-import Carousel from 'better-react-carousel'
+// import Carousel from 'better-react-carousel'
 import Product from './Product'
-import {Banner1, Banner2, Banner3, Banner4, Banner5, Banner6, Banner7} from '../Assets/BannerImages/Image'
 import {BataMens, Decor, JBL, TV, Phone, RedmiTV, WashingMachine, SteelRack, CandleHolder, WomenJacket} from '../Assets/ItemImages/Index'
 import './Home.css'
-// import ImageCarousel from './ImageCarousel'
+import ImageCarousel from './ImageCarousel'
 
 const Home = () => {
-
-    const CustomPrevArrow = ({ onClick }) => (
-        <button className="custom-arrow custom-prev-arrow" onClick={onClick} />
-    );
 
   return (
     <div className='home'>
         <div className='home-carousel'>
-            {/* <ImageCarousel /> */}
-             {/* carousel default row and col is 1 */}
-            <Carousel rows={1} cols={1} loop autoplay={2000} arrowLeft={CustomPrevArrow}>             
-                <Carousel.Item>
-                    <img width="100%" src={Banner1} className='home-img' alt = "banner1"/>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img width="100%" src={Banner2} className='home-img' alt = "banner2"/>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img width="100%" src={Banner3} className='home-img' alt = "banner3"/>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img width="100%" src={Banner4} className='home-img' alt = "banner4"/>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img width="100%" src={Banner5} className='home-img' alt = "banner5"/>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img width="100%" src={Banner6} className='home-img' alt = "banner6"/>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img width="100%" src={Banner7} className='home-img' alt = "banner7"/>
-                </Carousel.Item>
-            </Carousel>
+            <ImageCarousel />
         </div>
         <div className='home-row'>
             <Product

@@ -1,0 +1,29 @@
+ .custom-arrow {
+    position: absolute;
+    top: 20%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 30%;
+    z-index: 5;
+    background-color: transparent;
+    outline: none;
+    border: none;
+  }
+
+  .custom-prev-arrow {
+    left: 25px;
+  }
+
+  .custom-next-arrow {
+    right: 25px;
+  }
+
+  .prevImg {
+    scale:0.5;
+  }
+
+  .nextImg {
+    scale:0.5;
+  }
+
+  
