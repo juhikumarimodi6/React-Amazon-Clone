@@ -1,0 +1,23 @@
+.checkout-container {
+    max-width: 1500px;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.left-container {
+    margin: 10px;
+    background-color: white;
+    width:80%;
+    height:400px;
+    /* height:80vh; */
+}
+
+.right-container {
+    margin: 10px;
+    background-color: white;
+    width:20%;
+    /* height:400px; */
+    padding: 20px;
+}

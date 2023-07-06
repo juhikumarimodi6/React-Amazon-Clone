@@ -1,41 +1,65 @@
 .header2-container {
     background-color: #232F3E;
-    color:white;
-    max-height: 39px;
-    display: flex;
     height:40px;
+    box-sizing: border-box;
+}
+
+.header2 {
+    background-color: #232F3E;
+    color:white;
+    display: flex;
+    max-height:39px;
+    font-family: inherit;
+    font-size: 14px;
+    margin:0 0 0 10px;
 }
 
 .nav-left {
     object-fit: contain;
-    margin:0 20px;
     display: flex;
     align-items: center;
-    gap:10px;
+    max-height: 39px;
 }
 
 .hamburger {
     scale:1.5;
+    margin-right: 5px;
 }
 
 .nav-fill {
     display: flex;
-    align-items: center;
     overflow: hidden;
     flex-wrap: wrap;
-    margin-right: 2%;
+    white-space: nowrap;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: flex-end;
+    max-height: 39px;
+    line-height: 1em;
+    float: none;
 }
 
 .nav-fill-link {
-    margin:10px;
     color:white;
     text-decoration: none;
+    align-items: center;
+    /* float: left; */
+    font-family: inherit;
+    font-size: 14px;
+    margin: 5px 0 6px 0;
+    padding: 8px 9px;
+    max-height: 39px;
 }
 
 .nav-right {
-    display: flex;
-    border: solid;
-    margin-right: 0px;
+    display: block;
+    height: 40px;
+}
+.prime-image {
+    max-height: 39px;
+}
+.prime-image:hover {
     object-fit: contain;
-
+    border: 1px solid white;
+    box-sizing: border-box;
 }

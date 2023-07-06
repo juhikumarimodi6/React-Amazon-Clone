@@ -1,7 +1,13 @@
 import React from 'react'
 import './Product.css'
 
-const Product = ({url, title, rating, price}) => {
+const Product = ({url, title, rating, price, basketCount, setBasketCount}) => {
+  const [quantityCount, setQuantityCount] = React.useState(0)
+  const handleQuantityCount = () => {
+    setQuantityCount(quantityCount + 1);
+    setBasketCount(basketCount + 1);
+  }
+  console.log(basketCount)
   return (
     <div className='product'>
         <img src={url} alt="phone" className="product-image" />
@@ -15,7 +21,7 @@ const Product = ({url, title, rating, price}) => {
                 <strong>{new Intl.NumberFormat('en-IN').format(price)}</strong>
             </p>
         </div>
-        <button>Add to basket</button>
+        <button className='add-to-basket' onClick={handleQuantityCount}>Add to basket</button>
     </div>
   )
 }

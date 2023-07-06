@@ -8,6 +8,12 @@
     background-color: transparent;
     outline: none;
     border: none;
+    border-radius:5px;
+  }
+
+  .custom-arrow:focus{
+    box-shadow: inset 0 0 0 2px #fff, inset 0 0 0 4px #008296;
+    border-radius:5px;
   }
 
   .custom-prev-arrow {

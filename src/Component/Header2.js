@@ -9,16 +9,18 @@ const Header2 = () => {
                     "Books", "Baby", "Coupons", "Subscribe & Save", "Toys & Games", "Sports, Fitness & Outdoors"]
     return (
         <div className="header2-container">
-            <div className="nav-left">
-                <GiHamburgerMenu className="hamburger"/><span >All</span>
-            </div>
-            <div className="nav-fill">
-                {NavMenu.map((item, index) => {
-                    return<a href = "#" className="nav-fill-link" key = {index}>{item}</a>
-                })}
-            </div>
-            <div className="nav-right">
-                <img src={HeaderPrime} alt="prime member" />
+            <div className="header2">
+                <div className="nav-left nav-item">
+                    <GiHamburgerMenu className="hamburger"/><span >All</span>
+                </div>
+                <div className="nav-fill">
+                    {NavMenu.map((item, index) => {
+                        return<a href = "#" className="nav-fill-link nav-item" key = {index}>{item}</a>
+                    })}
+                </div>
+                <div className="nav-right">
+                    <img src={HeaderPrime} alt="prime member" className="prime-image"/>
+                </div>
             </div>
         </div>
     )

@@ -6,34 +6,41 @@ import ShoppingCart from "../Assets/Logo/shoppingCart.png"
 import Flag from "../Assets/Logo/Flag.png"
 import './Header.css'
 import Header2 from './Header2';
+import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({basketCount}) => {
   return (
     <div className="header-container">
         <div className='header'>
-            <img className="header-logo" src={AmazonLogo} alt="logo"/>
-            < TfiLocationPin className='header-locationPin'/>
-            <div className='header-option location'>
-                    <span className='header-optionLineOne'>
-                        Hello
-                    </span>
-                    <span className='header-optionLineTwo'>
-                        Select your address
-                    </span>
+            <Link to={'/'}>
+                <img className="header-logo nav-item" src={AmazonLogo} alt="logo"/>
+            </Link>
+            <div className="header-location-container nav-item">
+                < TfiLocationPin className='header-locationPin'/>
+                <div className='header-option location'>
+                        <span className='header-optionLineOne'>
+                            Hello
+                        </span>
+                        <span className='header-optionLineTwo'>
+                            Select your address
+                        </span>
                 </div>
-            <div className="header-search">
-                <span className='header-all'>All</span>
-                <input className='header-search-Input' type="text" placeholder='Search Amazon.in'/>
-                <SearchIcon className='header-searchIcon' />
             </div>
+                <div className="header-search">
+                    <span className='header-all'>All</span>
+                    <input className='header-search-Input' type="text" placeholder='Search Amazon.in'/>
+                    <SearchIcon className='header-searchIcon' />
+                </div>         
             <div className="header-nav">
-                <div className='header-option language'>
+                <div className='header-option  nav-item'>
+                <div className='language'>
                     <img src={Flag} alt="flag" className='flag'/>
-                    <span>
+                    <span className='header-language'>
                         EN
                     </span>
                 </div>
-                <div className='header-option'>
+                </div>
+                <div className='header-option nav-item'>
                     <span className='header-optionLineOne'>
                         Hello, sign in
                     </span>
@@ -41,7 +48,7 @@ const Header = () => {
                         Account & Lists
                     </span>
                 </div>
-                <div className='header-option'>
+                <div className='header-option nav-item'>
                     <span className='header-optionLineOne'>
                         Returns
                     </span>
@@ -50,15 +57,17 @@ const Header = () => {
                     </span>
                 </div>
             </div>
-            <div className='header-optionBasket'>
-                <div className='header-cart-container'>
-                    <span className='header-optionLineTwo header-basketCount'>0</span>
-                    <img src={ShoppingCart} alt="cart" className='header-cart'/>
-                </div>
+            <Link to={'/checkout'} className='cart-link'>
+                <div className='header-optionBasket nav-item' >
+                    <div className='header-cart-container'>
+                        <span className='header-optionLineTwo header-basketCount'>{basketCount}</span>
+                        <img src={ShoppingCart} alt="cart" className='header-cart'/>
+                    </div>
                     <span className='header-optionLineTwo cart'>
                         Cart
                     </span>
-            </div>
+                </div>
+            </Link>
         </div>
         <div>
             <Header2 />

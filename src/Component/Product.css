@@ -35,13 +35,21 @@
     margin-top: 5px;
 }
 
-.product > button {
+.add-to-basket {
     background-color: #f0c14b;
     border:1px solid;
     margin-top: 10px;
     border-color: #a88734 #9c7e31 #846a29;
     color: #111;
+    padding:1%;
+    border-radius: 5px;
 } 
+
+.add-to-basket:active {
+    box-shadow: inset;
+    background-color: #ca9a20;
+}
+
 
 .starall {
     background-image: url("../Assets/GlobalImages/RatingImages.png");

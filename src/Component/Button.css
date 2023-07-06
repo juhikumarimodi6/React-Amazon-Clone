@@ -1,0 +1,15 @@
+.amazon-button {
+    background-color: #f0c14b;
+    border:1px solid;
+    margin-top: 10px;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+    padding:1%;
+    border-radius: 5px;
+    font-family: "Amazon Ember",Arial,sans-serif;
+}
+
+.amazon-button:active {
+    box-shadow: inset;
+    background-color: #ca9a20;
+}
