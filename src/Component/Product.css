@@ -6,7 +6,7 @@
     margin: 10px;
     padding: 20px;
     width:100%;
-    max-height: 400px;
+    max-height: 500px;
     min-width: 100px;
     background-color: white;
     z-index: 1;
@@ -35,10 +35,6 @@
     margin-top: 5px;
 }
 
-.product > Button {
-    width:50%;
-}
-
 .starall {
     background-image: url("../Assets/GlobalImages/RatingImages.png");
     background-position: -2px -42px;
@@ -48,4 +44,25 @@
     margin-left: 0px;
     position: relative;
     right:42px;
+}
+
+.product-add-to-basket-button {
+    background-color: #F7CA00;
+    border:1px solid;
+    /* margin-top: 20px;
+    margin-bottom: 20px; */
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+    padding:1%;
+    border-radius: 5px;
+    font-family: "Amazon Ember",Arial,sans-serif;
+}
+
+.product-add-to-basket-button:hover {
+    background-color: #e2c33a;
+}
+
+.product-add-to-basket-button:active {
+    box-shadow: inset;
+    background-color: #b2992b;
 }

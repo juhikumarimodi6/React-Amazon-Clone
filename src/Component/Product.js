@@ -22,9 +22,7 @@ const Product = ({url, title, rating, price, basketCount, setBasketCount}) => {
                 <strong>{new Intl.NumberFormat('en-IN').format(price)}</strong>
             </p>
         </div>
-        <Button 
-          title = {'Add to Cart'}
-        />
+        <button className='product-add-to-basket-button' onClick={handleQuantityCount}>Add to Cart</button>
     </div>
   )
 }

@@ -1,0 +1,74 @@
+.checkout-product {
+    box-sizing: border-box;
+    padding: 12px 0 12px 12px;
+    font-family: inherit;
+}
+
+.checkout-product-container {
+    margin-top: 12px;
+    display: flex;
+}
+
+.checkout-product-container > img {
+    width: 180px;
+    aspect-ratio: auto 180 / 180;
+    height: 180px;
+    
+}
+
+.checkout-product-info {
+    display: flex;
+    gap:50px;
+}
+
+.checkout-product-info-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-product-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Adjust the number of lines to your preference */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+}
+
+.amazon-color-success {
+    color: #007600!important;
+}
+
+.amazon-size-small {
+    font-size: 12px!important;
+    line-height: 16px!important;
+}
+
+.amazon-fulfilled {
+    height:18px;
+    object-fit: contain;
+    object-position: 0px;
+    margin: 2px 0;
+}
+
+.amazon-checkbox-label {
+    position: relative;
+    padding-left: 5px;
+    text-indent: 0;
+    display: inline-block;
+}
+
+.delivery-message {
+    font-family: "Amazon Ember",Arial,sans-serif;
+    box-sizing: border-box;
+    margin:2px 0;
+}
+
+.amazon-color-link {
+    color: #007185!important;
+    cursor: pointer;
+}
+
+.amazon-color-link:hover {
+    text-decoration: underline;
+}
