@@ -7,17 +7,42 @@
 }
 
 .left-container {
-    margin: 10px;
+    margin: 20px;
     background-color: white;
     width:80%;
-    height:400px;
     /* height:80vh; */
 }
 
 .right-container {
-    margin: 10px;
+    margin: 20px;
     background-color: white;
     width:20%;
-    /* height:400px; */
     padding: 20px;
+}
+
+.right-container > p {
+    font-size: large;
+    margin-bottom: 5px;
+}
+
+.checkout-proceed-to-buy-button {
+    width:100%;
+    background-color: #F7CA00;
+    border:1px solid;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+    padding:3%;
+    border-radius: 5px;
+    font-family: "Amazon Ember",Arial,sans-serif;
+}
+
+.checkout-proceed-to-buy-button:hover {
+    background-color: #e2c33a;
+}
+
+.checkout-proceed-to-buy-button:active {
+    box-shadow: inset;
+    background-color: #b2992b;
 }

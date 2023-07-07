@@ -1,5 +1,6 @@
 import React from 'react'
 import './Product.css'
+import Button from './Button'
 
 const Product = ({url, title, rating, price, basketCount, setBasketCount}) => {
   const [quantityCount, setQuantityCount] = React.useState(0)
@@ -21,7 +22,9 @@ const Product = ({url, title, rating, price, basketCount, setBasketCount}) => {
                 <strong>{new Intl.NumberFormat('en-IN').format(price)}</strong>
             </p>
         </div>
-        <button className='add-to-basket' onClick={handleQuantityCount}>Add to basket</button>
+        <Button 
+          title = {'Add to Cart'}
+        />
     </div>
   )
 }
