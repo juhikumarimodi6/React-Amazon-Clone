@@ -7,8 +7,10 @@ import Flag from "../Assets/Logo/Flag.png"
 import './Header.css'
 import Header2 from './Header2';
 import { Link } from 'react-router-dom';
+import { useGlobalAppContext } from '../context/AppContext';
 
-const Header = ({basketCount}) => {
+const Header = () => {
+const {basketCount} = useGlobalAppContext();
   return (
     <div className="header-container">
         <div className='header'>

@@ -8,18 +8,11 @@ import Checkout from './Component/Checkout';
 
 function App() {
 
-  const [basketCount, setBasketCount] = React.useState(0);
-
   return (
     <div>
-      <Header 
-        basketCount = {basketCount}
-      />
+      <Header />
       <Routes>
-        <Route exact path='/' element={
-          <Home basketCount = {basketCount} setBasketCount = {setBasketCount} />
-          } 
-        />
+        <Route exact path='/' element={<Home />} />
         <Route path='/checkout' element={<Checkout />} />
         <Route element={<Error />} />
       </Routes>

@@ -3,14 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
-// import { StateProvider } from './Component/StateProvider';
+import { AppProvider } from './context/AppContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  // <StateProvider initialState={initialState} reducer={reducer}>
+  <AppProvider>
     <BrowserRouter>
-    <App />
-  </BrowserRouter>
-  // {/* </StateProvider> */}
+      <App />
+    </BrowserRouter>
+    </AppProvider>
 );
-

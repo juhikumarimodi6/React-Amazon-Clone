@@ -1,14 +1,16 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { useGlobalAppContext } from '../context/AppContext';
 import './Product.css'
-import Button from './Button'
 
-const Product = ({url, title, rating, price, basketCount, setBasketCount}) => {
+const Product = ({url, title, rating, price}) => {
+  const {basketCount , setBasketCount} = useGlobalAppContext();
   const [quantityCount, setQuantityCount] = React.useState(0)
+
   const handleQuantityCount = () => {
     setQuantityCount(quantityCount + 1);
     setBasketCount(basketCount + 1);
   }
-  console.log(basketCount)
+
   return (
     <div className='product'>
         <img src={url} alt="phone" className="product-image" />
