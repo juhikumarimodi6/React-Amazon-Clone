@@ -24,7 +24,7 @@ const Home = () => {
                 url = {BataMens}
                 title = 'BATA Mens Wonder Rain Shoe'
                 rating = {4}
-                price = {29499}
+                price = {2499}
             />
             <Product 
                 id = {12343}

@@ -1,14 +1,16 @@
-import React, {useContext} from 'react'
 import { useGlobalAppContext } from '../context/AppContext';
 import './Product.css'
 
-const Product = ({url, title, rating, price}) => {
-  const {basketCount , setBasketCount} = useGlobalAppContext();
-  const [quantityCount, setQuantityCount] = React.useState(0)
-
-  const handleQuantityCount = () => {
-    setQuantityCount(quantityCount + 1);
-    setBasketCount(basketCount + 1);
+const Product = ({id, url, title, rating, price}) => {
+  const {ContextState, ContextDispatch} = useGlobalAppContext();
+  const addToBasket = () => {
+                  ContextDispatch({type: 'ADD_TO_CART',
+                                    payload: {
+                                        id: id,
+                                        image: url,
+                                        title: title,
+                                        price: price
+                                      }});
   }
 
   return (
@@ -24,7 +26,7 @@ const Product = ({url, title, rating, price}) => {
                 <strong>{new Intl.NumberFormat('en-IN').format(price)}</strong>
             </p>
         </div>
-        <button className='product-add-to-basket-button' onClick={handleQuantityCount}>Add to Cart</button>
+        <button className='product-add-to-basket-button' onClick={addToBasket}>Add to Cart</button>
     </div>
   )
 }

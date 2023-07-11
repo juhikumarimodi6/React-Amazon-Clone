@@ -1,21 +1,28 @@
 import React from 'react'
 import CheckoutProduct from './CheckoutProduct'
 import './Checkout.css'
+import { useGlobalAppContext } from '../context/AppContext'
+import Subtotal from './Subtotal'
 
 const Checkout = () => {
+  const {ContextState} = useGlobalAppContext();
+
   return (
     <div className='checkout'>
     <div className='checkout-container'>
       <div className='left-container'>
-        <h1>Shopping Cart</h1>
-        <p className='align-right amazon-color-secondary'>Price</p>
-        <hr></hr>
-        <CheckoutProduct />
-        {/* <CheckoutProduct /> */}
-      </div>
+      {ContextState.basketCount === 0 ? <h1 className='empty-cart-heading'>Shopping Cart is Empty</h1>: 
+          <div>
+            <h1>Shopping Cart</h1>
+            <p className='align-right amazon-color-secondary'>Price</p>
+            <hr></hr>
+          </div>
+      }
+          <CheckoutProduct />
+           </div>
       <div className='right-container'>
-      <p>Subtotal (3 items):
-        <strong>₹{new Intl.NumberFormat('en-IN').format(120400)}</strong>
+      <p>Subtotal ({ContextState.basketCount} items):
+        <Subtotal />
       </p>
         <input type='checkbox' />
             This order contains a gift

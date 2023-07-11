@@ -10,7 +10,8 @@ import { Link } from 'react-router-dom';
 import { useGlobalAppContext } from '../context/AppContext';
 
 const Header = () => {
-const {basketCount} = useGlobalAppContext();
+const {ContextState} = useGlobalAppContext();
+    // console.log(contextState.ContextState.basketCount)
   return (
     <div className="header-container">
         <div className='header'>
@@ -62,7 +63,7 @@ const {basketCount} = useGlobalAppContext();
             <Link to={'/checkout'} className='cart-link'>
                 <div className='header-optionBasket nav-item' >
                     <div className='header-cart-container'>
-                        <span className='header-optionLineTwo header-basketCount'>{basketCount}</span>
+                        <span className='header-optionLineTwo header-basketCount'>{ContextState.basketCount}</span>
                         <img src={ShoppingCart} alt="cart" className='header-cart'/>
                     </div>
                     <span className='header-optionLineTwo cart'>

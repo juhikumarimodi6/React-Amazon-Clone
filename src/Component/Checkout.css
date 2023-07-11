@@ -30,7 +30,7 @@
     text-align: right;
 }
 
-.left-container > h1 {
+h1 {
     font-weight: 400;
     font-size: 28px;
     line-height: 36px;
@@ -71,4 +71,8 @@
 .checkout-proceed-to-buy-button:active {
     box-shadow: inset;
     background-color: #b2992b;
+}
+
+.empty-cart-heading {
+    width:60vw;
 }

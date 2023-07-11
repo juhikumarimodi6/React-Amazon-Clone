@@ -1,16 +1,13 @@
 import React, { createContext, useContext} from "react";
+import { reducer, initialState } from "../reducer/AppReducer";
 
 const AppContext = createContext();
 
 const AppProvider = ({children}) => {
-    const [basketCount, setBasketCount] = React.useState(0);
+    const [state, dispatch] = React.useReducer(reducer, initialState);
+    console.log(state);
     return (
-        <AppContext.Provider 
-            value={{
-                basketCount,
-                setBasketCount,
-            }}
-        >
+        <AppContext.Provider value={{ContextState: state, ContextDispatch: dispatch }} >
             {children}
         </AppContext.Provider>)
 }
