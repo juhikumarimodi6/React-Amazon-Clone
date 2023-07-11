@@ -31,10 +31,12 @@ const CheckoutProduct = () => {
                                 <input type='checkbox'/>
                                 <span className='amazon-checkbox-label amazon-size-small'>This will be a gift</span>
                             </label>
-                            <div className='checkout-product-quantity'>
-                                Qty:1
+                            <div >
+                                <div className='checkout-product-quantity'>
+                                    Qty:{item.quantity}
+                                </div>
                                 <span className='amazon-size-small amazon-color-link'>
-                                    <a  onClick={() => deleteFromCart(item.id)}>Delete</a>
+                                    <a onClick={() => deleteFromCart(item.id)}>Delete</a>
                                 </span>
                             </div>
                         </div>

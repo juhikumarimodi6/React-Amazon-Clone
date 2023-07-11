@@ -100,3 +100,6 @@
     display: inline-block;
     border:solid
 }
+.checkout-product-quantity {
+    margin-right:10px;
+}

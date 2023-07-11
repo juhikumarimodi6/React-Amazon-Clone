@@ -6,7 +6,7 @@ const Subtotal = () => {
     console.log(ContextState.basket)
     let sum = 0
     ContextState.basket.map((items) => {
-        sum = sum + items.price;
+        sum = sum + items.price *items.quantity;
     })
     return <strong>₹{new Intl.NumberFormat('en-IN').format(`${sum}`)}</strong>
 }
