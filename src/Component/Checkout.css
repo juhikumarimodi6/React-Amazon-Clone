@@ -22,6 +22,11 @@
 
 }
 
+.checkout-subtotal {
+    display: flex;
+    justify-content: right;
+}
+
 .amazon-color-secondary {
     color: #565959!important;
 }
@@ -76,3 +81,4 @@ h1 {
 .empty-cart-heading {
     width:60vw;
 }
+

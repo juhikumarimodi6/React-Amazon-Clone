@@ -8,7 +8,9 @@ const Subtotal = () => {
     ContextState.basket.map((items) => {
         sum = sum + items.price *items.quantity;
     })
-    return <strong>₹{new Intl.NumberFormat('en-IN').format(`${sum}`)}</strong>
+    return <p>Subtotal ({ContextState.basketCount} items):
+                <strong>₹{new Intl.NumberFormat('en-IN').format(`${sum}`)}</strong>
+            </p>
 }
 
 export default Subtotal

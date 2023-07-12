@@ -19,11 +19,12 @@ const Checkout = () => {
           </div>
       }
           <CheckoutProduct />
+          <div className='checkout-subtotal'>
+              <Subtotal />
+          </div>
            </div>
       <div className='right-container'>
-      <p>Subtotal ({ContextState.basketCount} items):
         <Subtotal />
-      </p>
         <input type='checkbox' />
             This order contains a gift
           <button className='checkout-proceed-to-buy-button'>Proceed to Buy</button>

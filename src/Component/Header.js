@@ -43,14 +43,16 @@ const {ContextState} = useGlobalAppContext();
                     </span>
                 </div>
                 </div>
-                <div className='header-option nav-item'>
-                    <span className='header-optionLineOne'>
-                        Hello, sign in
-                    </span>
-                    <span className='header-optionLineTwo'>
-                        Account & Lists
-                    </span>
-                </div>
+                <Link to={'/login'} className='link'>
+                    <div className='header-option nav-item'>
+                        <span className='header-optionLineOne'>
+                            Hello, sign in
+                        </span>
+                        <span className='header-optionLineTwo'>
+                            Account & Lists
+                        </span>
+                    </div>
+                </Link>
                 <div className='header-option nav-item'>
                     <span className='header-optionLineOne'>
                         Returns
@@ -60,7 +62,7 @@ const {ContextState} = useGlobalAppContext();
                     </span>
                 </div>
             </div>
-            <Link to={'/checkout'} className='cart-link'>
+            <Link to={'/checkout'} className='link'>
                 <div className='header-optionBasket nav-item' >
                     <div className='header-cart-container'>
                         <span className='header-optionLineTwo header-basketCount'>{ContextState.basketCount}</span>
