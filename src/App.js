@@ -26,3 +26,5 @@ function App() {
 }
 
 export default App;
+
+// https://github.com/ksowah/AMAZON/tree/main/src

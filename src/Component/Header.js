@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import AmazonLogo from '../Assets/Logo/HeaderLogo.png'
 import SearchIcon from '@mui/icons-material/Search';
 import { TfiLocationPin } from "react-icons/tfi";
@@ -8,10 +8,32 @@ import './Header.css'
 import Header2 from './Header2';
 import { Link } from 'react-router-dom';
 import { useGlobalAppContext } from '../context/AppContext';
+import {auth} from '../Firebase'
+import { signOut } from 'firebase/auth';
 
 const Header = () => {
 const {ContextState} = useGlobalAppContext();
     // console.log(contextState.ContextState.basketCount)
+    const [username, setUserName] = useState("");
+
+    useEffect(() => {
+        auth.onAuthStateChanged((user) => {
+            if(user) {
+                setUserName(user.displayName);
+            } else {
+                setUserName("");
+            }
+        })
+    }, []);
+    const handleSignOut = (event) => {
+        event.preventDefault();
+        console.log("hande signout")
+        auth.signOut().then(() => {
+            console.log("sign out successfu")
+        }).catch((error) => {
+            console.log(error)
+        })
+    }
   return (
     <div className="header-container">
         <div className='header'>
@@ -43,10 +65,11 @@ const {ContextState} = useGlobalAppContext();
                     </span>
                 </div>
                 </div>
-                <Link to={'/login'} className='link'>
-                    <div className='header-option nav-item'>
+                <Link to={'/login'} className='link' >
+                    {/* <div className='header-option nav-item' onClick = {event => handleSignOut(event)} > */}
+                    <div className='header-option nav-item' >
                         <span className='header-optionLineOne'>
-                            Hello, sign in
+                            Hello, {username? username:"sign in"}
                         </span>
                         <span className='header-optionLineTwo'>
                             Account & Lists
