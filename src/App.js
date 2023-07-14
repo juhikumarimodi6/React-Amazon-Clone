@@ -7,10 +7,12 @@ import Error from './Component/Error'
 import Checkout from './Component/Checkout';
 import SignIn from './Component/SignIn';
 import SignUp from './Component/SignUp';
+import Footer from './Component/Footer';
 
 function App() {
   const location = useLocation();
   const showHeader = (location.pathname !== '/login') && (location.pathname !== '/signup');
+  const showFooter = showHeader;
   return (
     <div>
       {showHeader && <Header />}
@@ -21,6 +23,7 @@ function App() {
         <Route path='/signup' element={<SignUp />} />
         <Route element={<Error />} />
       </Routes>
+      {showFooter && <Footer />}
     </div>
   );
 }

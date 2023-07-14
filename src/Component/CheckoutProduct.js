@@ -1,5 +1,4 @@
 import React from 'react'
-import { JBL } from '../Assets/ItemImages/Index'
 import './CheckoutProduct.css'
 import AmazonFulfilled from '../Assets/Logo/amazon-fulfilled.png'
 import { useGlobalAppContext } from '../context/AppContext'

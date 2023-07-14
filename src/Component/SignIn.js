@@ -13,7 +13,8 @@ const SignIn = () => {
         password:""
     })
     const [submitted, setSubmitted] = React.useState(false)
-    // const [valid, setValid] = React.useState(false)
+    const [valid, setValid] = React.useState(false);
+    const [error1, setError1] = React.useState("");
     const [submitButtonDisabled, setSubmitButtonDisabled] = React.useState(false)
 
     const handleSignIn = (event) => {
@@ -24,16 +25,16 @@ const SignIn = () => {
         setSubmitButtonDisabled(true)
         signInWithEmailAndPassword(auth, userDetails.email, userDetails.password)
         .then(async(res) => {
+            console.log(res);
             setSubmitButtonDisabled(false)
             navigate('/')
         })
         .catch(error => {
             setSubmitButtonDisabled(false)
-      
+            setError1('Enter valid input fields')
           if (error.code === 'auth/invalid-email') {
             console.log('That email address is invalid!');
           }
-      
           console.error(error);
         });
     }
@@ -72,6 +73,7 @@ const SignIn = () => {
                         {submitted && !userDetails.password && <span className = "error"> <IoAlert /> Enter password </span>}
                     <br/>
 
+                    {error1 && <span className = "error">  {error1} </span>}
                     <button className='login__btn' type='submit' onClick={event => handleSignIn(event)} disabled={submitButtonDisabled}>Sign In</button>
 
                     <p>New Amazon user? <Link to = '/signup' className='amazon-color-link'>Sign up now.</Link></p>

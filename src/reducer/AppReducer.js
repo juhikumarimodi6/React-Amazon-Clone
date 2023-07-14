@@ -5,6 +5,7 @@ export const initialState = {
 
 export const reducer = (state, action) => {
             console.log(action);
+            console.log(state);
             switch(action.type){
                 case 'ADD_TO_CART' : 
                     let isObjectUpdated = false;
@@ -29,6 +30,7 @@ export const reducer = (state, action) => {
                         basketCount: state.basketCount - quantity, 
                         basket: state.basket.filter((item) => item.id !== action.payload)
                     }
+
                 default:
                     return {...state};
             }

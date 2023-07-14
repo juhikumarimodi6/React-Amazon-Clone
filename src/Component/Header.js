@@ -6,18 +6,19 @@ import ShoppingCart from "../Assets/Logo/shoppingCart.png"
 import Flag from "../Assets/Logo/Flag.png"
 import './Header.css'
 import Header2 from './Header2';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useGlobalAppContext } from '../context/AppContext';
 import {auth} from '../Firebase'
 import { signOut } from 'firebase/auth';
 
 const Header = () => {
-const {ContextState} = useGlobalAppContext();
-    // console.log(contextState.ContextState.basketCount)
+    const navigate = useNavigate();
+    const {ContextState} = useGlobalAppContext();
     const [username, setUserName] = useState("");
 
     useEffect(() => {
         auth.onAuthStateChanged((user) => {
+            console.log(user);
             if(user) {
                 setUserName(user.displayName);
             } else {
@@ -26,14 +27,19 @@ const {ContextState} = useGlobalAppContext();
         })
     }, []);
     const handleSignOut = (event) => {
-        event.preventDefault();
+        // event.preventDefault();
         console.log("hande signout")
-        auth.signOut().then(() => {
+        signOut(auth).then(() => {
             console.log("sign out successfu")
         }).catch((error) => {
             console.log(error)
         })
     }
+
+    const Capitalize = (str) => {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
   return (
     <div className="header-container">
         <div className='header'>
@@ -69,7 +75,7 @@ const {ContextState} = useGlobalAppContext();
                     {/* <div className='header-option nav-item' onClick = {event => handleSignOut(event)} > */}
                     <div className='header-option nav-item' >
                         <span className='header-optionLineOne'>
-                            Hello, {username? username:"sign in"}
+                            Hello, {username? Capitalize(username):"sign in"}
                         </span>
                         <span className='header-optionLineTwo'>
                             Account & Lists
@@ -96,6 +102,13 @@ const {ContextState} = useGlobalAppContext();
                     </span>
                 </div>
             </Link>
+            {username && 
+                <div className='header-option nav-item' onClick = {event => handleSignOut(event)} >
+                    <span className='header-optionLineTwo'>
+                        Sign Out
+                    </span>
+                </div> 
+            }
         </div>
         <div>
             <Header2 />
