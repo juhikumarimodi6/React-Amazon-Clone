@@ -3,6 +3,7 @@ import CheckoutProduct from './CheckoutProduct'
 import './Checkout.css'
 import { useGlobalAppContext } from '../context/AppContext'
 import Subtotal from './Subtotal'
+import SaveForLater from './SaveForLater'
 
 const Checkout = () => {
   const {ContextState} = useGlobalAppContext();
@@ -30,6 +31,7 @@ const Checkout = () => {
           <button className='checkout-proceed-to-buy-button'>Proceed to Buy</button>
       </div>
     </div>
+    <SaveForLater />
     </div>
   )
 }

@@ -1,7 +1,7 @@
 .header-container {
-    position: sticky;
+    /* position: sticky;
     top: 0;
-    z-index:100;
+    z-index:100; */
 }
 
 .header {
@@ -12,6 +12,9 @@
     font-family: "Amazon Ember",Arial,sans-serif;
     font-size: 14px;
     box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index:100;
 }
 .nav-item {
     padding:7px;

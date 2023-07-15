@@ -4,10 +4,12 @@ import Product from './Product'
 import {BataMens, Decor, JBL, TV, Phone, RedmiTV, WashingMachine, SteelRack, CandleHolder, WomenJacket} from '../Assets/ItemImages/Index'
 import './Home.css'
 import ImageCarousel from './ImageCarousel'
+import Header2 from './Header2'
 
 const Home = () => {
   return (
     <div className='home'>
+        <Header2 />
         <div className='home-carousel'>
             <ImageCarousel />
         </div>

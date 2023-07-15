@@ -2,6 +2,7 @@ import React from 'react'
 import './CheckoutProduct.css'
 import AmazonFulfilled from '../Assets/Logo/amazon-fulfilled.png'
 import { useGlobalAppContext } from '../context/AppContext'
+import Counter from './Counter'
 
 const CheckoutProduct = () => {
     const {ContextState, ContextDispatch} = useGlobalAppContext();
@@ -32,7 +33,11 @@ const CheckoutProduct = () => {
                             </label>
                             <div className='checkout-product-quantity-container'>
                                 <div className='checkout-product-quantity'>
-                                    Qty:{item.quantity}
+                                    {/* Qty:{item.quantity}  */}
+                                    <Counter 
+                                        quantity = {item.quantity}
+                                        id = {item.id}
+                                    />
                                 </div>
                                 <span className='amazon-size-small amazon-color-link '>
                                     <a className='left-right-border' onClick={() => deleteFromCart(item.id)}>Delete</a>

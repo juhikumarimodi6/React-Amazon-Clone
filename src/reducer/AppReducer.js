@@ -30,6 +30,30 @@ export const reducer = (state, action) => {
                         basketCount: state.basketCount - quantity, 
                         basket: state.basket.filter((item) => item.id !== action.payload)
                     }
+                case 'SIGN-OUT' : 
+                    return {
+                        basketCount : 0,
+                        basket : [],
+                    }
+                case 'INCREASE-QUANTITY' :
+                    state.basket.filter((item) => {
+                        (item.id === action.payload) && (item.quantity = item.quantity + 1)
+                    }) 
+                    return {
+                        ...state, 
+                        basketCount: state.basketCount + 1,
+                        basket: [...state.basket],
+                    }
+                case 'DECREASE-QUANTITY' :
+
+                    state.basket.filter((item) => {
+                        (item.id === action.payload) && (item.quantity = item.quantity - 1)
+                    }) 
+                    return {
+                        ...state, 
+                        basketCount: state.basketCount - 1,
+                        basket: [...state.basket],
+                    }
 
                 default:
                     return {...state};

@@ -19,12 +19,10 @@
 .left-container {
     background-color: white;
     padding:20px;
-
 }
 
-.checkout-subtotal {
-    display: flex;
-    justify-content: right;
+.empty-cart-heading {
+    width:60vw;
 }
 
 .amazon-color-secondary {
@@ -42,6 +40,11 @@ h1 {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+.checkout-subtotal {
+    display: flex;
+    justify-content: right;
 }
 
 .right-container {
@@ -76,9 +79,5 @@ h1 {
 .checkout-proceed-to-buy-button:active {
     box-shadow: inset;
     background-color: #b2992b;
-}
-
-.empty-cart-heading {
-    width:60vw;
 }
 

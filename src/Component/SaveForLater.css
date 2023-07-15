@@ -1,0 +1,11 @@
+.save-for-later-container {
+    height:10vh;
+    font-family: "Amazon Ember",Arial,sans-serif;
+    background-color: white;
+    font-weight: 400;
+    font-size: 28px;
+    display: flex;
+    padding:20px;
+    margin:20px 40px;
+    max-width: 800px;
+}

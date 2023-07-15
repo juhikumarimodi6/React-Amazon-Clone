@@ -1,0 +1,32 @@
+.counter-container {
+    background-color: #EAEDED;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:5vw;
+    height: 1.5rem;
+    /* margin: 2%; */
+}
+
+.left, .right , .count {
+    color:black;
+    border:none;
+    display: flex;
+    align-items: center;
+    margin:2%;
+    padding:2%;
+    background-color:#EAEDED;
+    font-size: large;
+    font-weight: bold;
+    height:80%;
+}
+
+.count {
+    /* margin-top:0px; */
+    background-color: white;
+    color:#007185;
+    padding: 0 10%;
+    height:80%;
+    /* border:solid; */
+}
