@@ -3,9 +3,10 @@
     font-family: "Amazon Ember",Arial,sans-serif;
     background-color: white;
     font-weight: 400;
-    font-size: 28px;
+    font-size: 28x;
     display: flex;
     padding:20px;
     margin:20px 40px;
-    max-width: 800px;
+    max-width: 80vw;
+    box-sizing: border-box;
 }

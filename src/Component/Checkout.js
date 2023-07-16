@@ -1,4 +1,3 @@
-import React from 'react'
 import CheckoutProduct from './CheckoutProduct'
 import './Checkout.css'
 import { useGlobalAppContext } from '../context/AppContext'

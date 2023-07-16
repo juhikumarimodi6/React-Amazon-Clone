@@ -58,6 +58,11 @@ export const reducer = (state, action) => {
                         ...state,
                         products : action.payload,
                     }
+                case 'SEARCH_PRODUCT_INPUT' : 
+                    return {
+                        ...state,
+                        searchInput: action.payload,
+                    }
 
                 default:
                     return {...state};

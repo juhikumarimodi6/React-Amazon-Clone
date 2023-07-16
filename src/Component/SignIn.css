@@ -42,6 +42,13 @@
     padding: 5px;
 }
 
+.error {
+    color: #c40000;
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 0px;
+}
+
 .login__btn{
     background-color: #f0c14b;
     border-radius: 2px;
@@ -54,6 +61,10 @@
     color: #111;
 }
 
+.login__btn:disabled {
+    background-color: rgb(224, 217, 217) !important;
+}
+
 .login__container > form > p {
     margin-top: 15px;
     font-size: 12px;
@@ -64,13 +75,3 @@ Link {
     text-decoration: none;
 }
 
-.error {
-    color: #c40000;
-    font-size: 12px;
-    line-height: 15px;
-    margin-top: 0px;
-}
-
-.login__btn:disabled {
-    background-color: rgb(224, 217, 217) !important;
-}

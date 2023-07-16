@@ -4,9 +4,8 @@
   import './SearchFilter.css'
 
   const SearchFilter = () => {
-    const [searchInput, setSearchInput] = React.useState("")
     const [isFocussed, setIsFocussed] = React.useState(false)
-    const {ContextState} = useGlobalAppContext();
+    const {ContextState, ContextDispatch} = useGlobalAppContext();
 
     const handleFocus = () => {
         setIsFocussed(true);
@@ -16,16 +15,14 @@
         setIsFocussed(false);
     }
 
-    function enteredName(event) {
-        setSearchInput(() => {
-        return event.target.value;
+    const enteredName = (event) => {
+        ContextDispatch({
+            type: 'SEARCH_PRODUCT_INPUT',
+            payload: event.target.value
         })
     }
-     const keys = ['title', 'description', 'category'];
 
-    const search = (data) => {
-        return (data.filter(user=> keys.some((key) => user[key].toLowerCase().includes(searchInput.toLowerCase()))))
-    }
+    // console.log(ContextState)
 
     return (
             <div tabindex="0" className="header-search">
@@ -42,7 +39,6 @@
                     />
                     <button className='header-searchIcon'><SearchIcon /></button>
                 </form>
-                {/* {console.log(search(ContextState.products))} */}
             </div>  
     )
   }

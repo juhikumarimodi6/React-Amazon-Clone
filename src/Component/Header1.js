@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import AmazonLogo from '../Assets/Logo/HeaderLogo.png'
 import { TfiLocationPin } from "react-icons/tfi";
-import ShoppingCart from "../Assets/Logo/shoppingCart.png"
+import SearchFilter from './SearchFilter';
 import Flag from "../Assets/Logo/Flag.png"
+import ShoppingCart from "../Assets/Logo/shoppingCart.png"
 import './Header.css'
 import { Link, useNavigate } from 'react-router-dom';
 import { useGlobalAppContext } from '../context/AppContext';
 import {auth} from '../Firebase'
 import { signOut } from 'firebase/auth';
-import SearchFilter from './SearchFilter';
 
 const Header1 = () => {
     const navigate = useNavigate();

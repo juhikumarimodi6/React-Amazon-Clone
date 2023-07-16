@@ -1,4 +1,3 @@
-import React from "react";
 import './Footer.css';
 import AmazonFooterLogo from '../Assets/Logo/HeaderLogo.png'
 import { Link } from "react-router-dom";
@@ -87,31 +86,31 @@ const Footer = () => {
                                     Books, art <br />& collectibles
                                 </li>
                             </td>
-                            <td className="navFooterDescSpacer" style={{width: '4%'}}></td>
+                            <td className="navFooterDescSpacer"></td>
                             <td className="navFooterDescItem">
                                 <li><h5>Amazon Web Services</h5>
                                     Scalable Cloud <br />Computing Services
                                 </li>
                             </td>
-                            <td className="navFooterDescSpacer" style={{width: '4%'}}></td>
+                            <td className="navFooterDescSpacer"></td>
                             <td className="navFooterDescItem">
                                 <li><h5>Audible</h5>
                                     Download <br />Audio Books
                                 </li>
                             </td>
-                            <td className="navFooterDescSpacer" style={{width: '4%'}}></td>
+                            <td className="navFooterDescSpacer"></td>
                             <td className="navFooterDescItem">
                                 <li><h5>DPReview</h5>
                                     Digital <br />Photography
                                 </li>
                             </td>
-                            <td className="navFooterDescSpacer" style={{width: '4%'}}></td>
+                            <td className="navFooterDescSpacer"></td>
                             <td className="navFooterDescItem">
                                 <li><h5>IMDb</h5>
                                     Movies, TV <br />& Celebrities
                                 </li>
                             </td>
-                            <td className="navFooterDescSpacer" style={{width: '4%'}}></td>
+                            <td className="navFooterDescSpacer"></td>
                         </tr>
                         <tr className="footer-table-row"></tr>
                         <tr className="footer-table-row">
@@ -120,25 +119,25 @@ const Footer = () => {
                                     Designer <br />Fashion Brands
                                 </li>
                             </td>
-                            <td className="navFooterDescSpacer" style={{width: '4%'}}></td>
+                            <td className="navFooterDescSpacer"></td>
                             <td className="navFooterDescItem">
                                 <li><h5>Amazon Business</h5>
                                     Everything For <br />Your Business
                                 </li>
                             </td>
-                            <td className="navFooterDescSpacer" style={{width: '4%'}}></td>
+                            <td className="navFooterDescSpacer"></td>
                             <td className="navFooterDescItem">
                                 <li><h5>Prime Now</h5>
                                     2-Hour Delivery <br />on Everyday Items
                                 </li>
                             </td>
-                            <td className="navFooterDescSpacer" style={{width: '4%'}}></td>
+                            <td className="navFooterDescSpacer"></td>
                             <td className="navFooterDescItem">
                                 <li><h5>Amazon Prime Music</h5>
                                     100 million songs, ad-free <br />Over 15 million podcast episodes
                                 </li>
                             </td>
-                            <td className="navFooterDescSpacer" style={{width: '4%'}}></td>
+                            <td className="navFooterDescSpacer"></td>
                         </tr>
                     </tbody>
                 </table>

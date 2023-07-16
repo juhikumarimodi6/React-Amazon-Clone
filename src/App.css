@@ -20,6 +20,10 @@
     color: #011113!important;
 }
 
+.align-right {
+    text-align: right;
+}
+
 .amazon-color-secondary {
     color: #565959!important;
 }

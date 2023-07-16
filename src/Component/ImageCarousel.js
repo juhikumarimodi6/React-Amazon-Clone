@@ -33,29 +33,31 @@ const ImageCarousel = () => {
     };
 
     return (
-      <Slider {...settings}>
-        <div>
-            <img width="100%" src={Banner1} className='home-img' alt = "banner1"/>
-        </div>
-        <div>
-            <img width="100%" src={Banner2} className='home-img' alt = "banner2"/>
-        </div>
-        <div>
-            <img width="100%" src={Banner3} className='home-img' alt = "banner3"/>
-        </div>
-        <div>
-            <img width="100%" src={Banner4} className='home-img' alt = "banner4"/>
-        </div>
-        <div>
-            <img width="100%" src={Banner5} className='home-img' alt = "banner5"/>
-        </div>
-        <div>
-            <img width="100%" src={Banner6} className='home-img' alt = "banner6"/>
-        </div>
-        <div>
-            <img width="100%" src={Banner7} className='home-img' alt = "banner7"/>
-        </div>
-      </Slider>
+        <div className='carousel-container'>
+            <Slider {...settings}>
+                <div>
+                    <img width="100%" src={Banner1} className='banner-img' alt = "banner1"/>
+                </div>
+                <div>
+                    <img width="100%" src={Banner2} className='banner-img' alt = "banner2"/>
+                </div>
+                <div>
+                    <img width="100%" src={Banner3} className='banner-img' alt = "banner3"/>
+                </div>
+                <div>
+                    <img width="100%" src={Banner4} className='banner-img' alt = "banner4"/>
+                </div>
+                <div>
+                    <img width="100%" src={Banner5} className='banner-img' alt = "banner5"/>
+                </div>
+                <div>
+                    <img width="100%" src={Banner6} className='banner-img' alt = "banner6"/>
+                </div>
+                <div>
+                    <img width="100%" src={Banner7} className='banner-img' alt = "banner7"/>
+                </div>
+            </Slider>
+      </div>
     );
   };
 

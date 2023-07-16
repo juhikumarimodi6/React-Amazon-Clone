@@ -25,11 +25,7 @@
     width:60vw;
 }
 
-.align-right {
-    text-align: right;
-}
-
-h1 {
+.h1 {
     font-weight: 400;
     font-size: 28px;
     line-height: 36px;

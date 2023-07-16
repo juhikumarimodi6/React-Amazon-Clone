@@ -1,4 +1,3 @@
-import React from 'react'
 import './CheckoutProduct.css'
 import AmazonFulfilled from '../Assets/Logo/amazon-fulfilled.png'
 import { useGlobalAppContext } from '../context/AppContext'
@@ -6,7 +5,7 @@ import Counter from './Counter'
 
 const CheckoutProduct = () => {
     const {ContextState, ContextDispatch} = useGlobalAppContext();
-    console.log(ContextState.basket);
+    // console.log(ContextState.basket);
     const deleteFromCart = (id) => {
         ContextDispatch({type: 'DELETE_FROM_CART',
                             payload: id,
@@ -47,9 +46,7 @@ const CheckoutProduct = () => {
                             </div>
                         </div>
                         <div className="checkout-product-info-right">
-                        <p className="checkout-product-price">
                             <strong>${new Intl.NumberFormat('en-IN').format(`${item.price}`)}</strong>
-                        </p>
                         </div>
                     </div>
                 </div>

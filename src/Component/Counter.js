@@ -4,7 +4,7 @@ import { MdDelete } from "react-icons/md";
 
     const Counter = ({quantity, id}) => {
     const {ContextState, ContextDispatch} = useGlobalAppContext();
-    console.log(ContextState.basket)
+    // console.log(ContextState.basket)
 
     const handleIncrement = (id) => {
         ContextDispatch({

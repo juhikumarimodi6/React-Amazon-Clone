@@ -30,7 +30,8 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    height:3em;
+    height:2.4em;
+    /* margin-bottom: 10px; */
 }
 
 .product-price {

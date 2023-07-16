@@ -7,16 +7,6 @@
     flex-direction: column;
 }
 
-.home-carousel {
-    margin-bottom: -20%;
-}
-
-.home-img {
-    width: 100%;
-    z-index: -1;
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
-    margin: auto;
-}
 .product-container {
     display:grid;
     margin-left: 20px;
@@ -26,13 +16,15 @@
 .product-home {
     padding: 2%;
 }
-.home-row {
-    display: flex;
-    margin-left: 20px;
-    margin-right: 20px;
-}
+
 @media only screen and (max-width: 800px) {
     .product-container {
         grid-template-columns: auto auto auto ;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .product-container {
+        grid-template-columns: auto auto ;
     }
 }

@@ -43,6 +43,12 @@
     margin-bottom: 10px;
 }
 
+.delivery-message {
+    font-family: "Amazon Ember",Arial,sans-serif;
+    box-sizing: border-box;
+    margin:2px 0;
+}
+
 .amazon-fulfilled {
     height:18px;
     object-fit: contain;
@@ -57,28 +63,6 @@
     display: inline-block;
 }
 
-.delivery-message {
-    font-family: "Amazon Ember",Arial,sans-serif;
-    box-sizing: border-box;
-    margin:2px 0;
-}
-
-.horizontal-line {
-    display: flex;
-    flex-direction: row;
-}
-
-.checkout-product-info-right {
-    display: flex;
-    justify-content: flex-end;
-    width:10vw;
-}
-
-.delete {
-    display: inline-block;
-    border:solid
-}
-
 .checkout-product-quantity-container {
     display: flex;
     align-items: center;
@@ -88,8 +72,22 @@
     margin-right:10px;
 }
 
-.left-right-border {
-border-right: solid #ddd;
-padding-left: 5px;
-padding-right: 5px;
+.horizontal-line {
+    display: flex;
+    flex-direction: row;
 }
+
+.left-right-border {
+    border-right: solid #ddd;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.checkout-product-info-right {
+    display: flex;
+    justify-content: flex-end;
+    width:10vw;
+}
+
+
+

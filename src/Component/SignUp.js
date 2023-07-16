@@ -1,4 +1,4 @@
-import './SignIn.css'
+import './SignUp.css'
 import SignUpHeaderLogo from '../Assets/Logo/amazon-logo.png';
 import { Link, useNavigate } from 'react-router-dom';
 import React from 'react';
