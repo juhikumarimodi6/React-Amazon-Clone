@@ -47,40 +47,7 @@
     margin-top: 12px;
 }
 
-.header-search {
-    box-sizing: border-box;
-    display: flex;
-    flex:1;
-    box-shadow: inset 0 0 0 2px #fff, inset 0 0 0 4px #cd9042;
-    align-items: center;
-    border-radius: 5px;
-}
 
-.header-all {
-    padding: 9px 10px; 
-    background-color: #dadada ;
-    color: #0F1111;
-    font-family: inherit;
-    font-size: small;
-    border-radius: 5px 0px 0px 5px;
- }
-
-.header-search-Input {
-    padding: 10px; 
-    border: none;
-    width: 100%;
-}
-
-.header-searchIcon {
-    padding: 5px;
-    height: 22px;
-    background-color: #cd9042;
-    border-radius: 0px 5px 5px 0px;
-}
-
-.header-search:focus {
-    box-shadow: inset 0 0 0 2px #cd9042, inset 0 0 0 4px #785324;
-}
 
 .header-nav {
     display: flex;
