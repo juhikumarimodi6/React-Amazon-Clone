@@ -43,15 +43,6 @@
     margin-bottom: 10px;
 }
 
-.amazon-color-success {
-    color: #007600!important;
-}
-
-.amazon-size-small {
-    font-size: 12px!important;
-    line-height: 16px!important;
-}
-
 .amazon-fulfilled {
     height:18px;
     object-fit: contain;
@@ -70,19 +61,6 @@
     font-family: "Amazon Ember",Arial,sans-serif;
     box-sizing: border-box;
     margin:2px 0;
-}
-
-.amazon-color-link {
-    color: #007185!important;
-    cursor: pointer;
-}
-
-.amazon-color-link:hover {
-    text-decoration: underline;
-}
-
-.amazon-color-link:active {
-    color: #011113!important;
 }
 
 .horizontal-line {
@@ -109,7 +87,6 @@
 .checkout-product-quantity {
     margin-right:10px;
 }
-
 
 .left-right-border {
 border-right: solid #ddd;

@@ -1,0 +1,27 @@
+.amazon-color-success {
+    color: #007600!important;
+}
+
+.amazon-size-small {
+    font-size: 12px!important;
+    line-height: 16px!important;
+}
+
+.amazon-color-link {
+    color: #007185!important;
+    cursor: pointer;
+}
+
+.amazon-color-link:hover {
+    text-decoration: underline;
+}
+
+.amazon-color-link:active {
+    color: #011113!important;
+}
+
+.amazon-color-secondary {
+    color: #565959!important;
+}
+
+

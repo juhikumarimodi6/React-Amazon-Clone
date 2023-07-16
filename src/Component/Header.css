@@ -133,6 +133,7 @@
     top: -7px;
     color:#cd9042;
     z-index: 2;
+    border-radius: 50%;
 }
 
 .location {

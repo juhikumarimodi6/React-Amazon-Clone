@@ -4,7 +4,7 @@
 
   const SearchFilter = () => {
     const [searchInput, setSearchInput] = React.useState("")
-    const {ContextState, ContextDispatch} = useGlobalAppContext();
+    const {ContextState} = useGlobalAppContext();
 
     function enteredName(event) {
         setSearchInput(() => {
@@ -28,7 +28,7 @@
                     id="mySearch" 
                 />
                 <SearchIcon className='header-searchIcon' />
-                {console.log(search(ContextState.products))}
+                {/* {console.log(search(ContextState.products))} */}
             </div>  
     )
   }

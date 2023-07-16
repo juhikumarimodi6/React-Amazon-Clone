@@ -27,10 +27,10 @@ const CheckoutProduct = () => {
                             <span className='amazon-color-success amazon-size-small'>In stock</span>
                             <span className='amazon-size-small amazon-color-secondary delivery-message'>Eligible for FREE Shipping</span>
                             <img src={AmazonFulfilled} alt="AmazonFulfilled" className='amazon-fulfilled' />
-                            <label>
+                            <form>
                                 <input type='checkbox'/>
-                                <span className='amazon-checkbox-label amazon-size-small'>This will be a gift</span>
-                            </label>
+                                <label className='amazon-checkbox-label amazon-size-small'>This will be a gift</label>
+                            </form>
                             <div className='checkout-product-quantity-container'>
                                 <div className='checkout-product-quantity'>
                                     <Counter 
@@ -38,11 +38,11 @@ const CheckoutProduct = () => {
                                         id = {item.id}
                                     />
                                 </div>
-                                <span className='amazon-size-small amazon-color-link '>
-                                    <a className='left-right-border' onClick={() => deleteFromCart(item.id)}>Delete</a>
-                                    <a className='left-right-border' > Save for later </a>
-                                    <a className='left-right-border' > See more like this </a>
-                                    <a className='left-right-border' > Share </a>
+                                <span className='amazon-size-small '>
+                                    <a className='left-right-border amazon-color-link' onClick={() => deleteFromCart(item.id)}>Delete</a>
+                                    <a className='left-right-border amazon-color-link' > Save for later </a>
+                                    <a className='left-right-border amazon-color-link' > See more like this </a>
+                                    <a className='left-right-border amazon-color-link' > Share </a>
                                 </span>
                             </div>
                         </div>
