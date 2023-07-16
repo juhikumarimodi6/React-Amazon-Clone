@@ -5,15 +5,15 @@
     justify-content: flex-end;
     margin: 10px;
     padding: 20px;
-    width:100%;
     max-height: 500px;
-    min-width: 100px;
+    /* min-width: 100px; */
     background-color: white;
     z-index: 1;
+    box-sizing: border-box;
 }
 
 .product-image{
-    max-height: 200px;
+    height: 200px;
     width: 100%;
     object-fit: contain;
     margin-bottom: 15px;
@@ -24,11 +24,13 @@
 }
 
 .product-title {
+    box-sizing: border-box;
     display: -webkit-box;
     -webkit-line-clamp: 2; /* Adjust the number of lines to your preference */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    height:3em;
 }
 
 .product-price {
@@ -49,8 +51,6 @@
 .product-add-to-basket-button {
     background-color: #F7CA00;
     border:1px solid;
-    /* margin-top: 20px;
-    margin-bottom: 20px; */
     border-color: #a88734 #9c7e31 #846a29;
     color: #111;
     padding:1%;

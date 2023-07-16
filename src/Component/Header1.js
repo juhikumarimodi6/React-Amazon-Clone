@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import AmazonLogo from '../Assets/Logo/HeaderLogo.png'
-import SearchIcon from '@mui/icons-material/Search';
 import { TfiLocationPin } from "react-icons/tfi";
 import ShoppingCart from "../Assets/Logo/shoppingCart.png"
 import Flag from "../Assets/Logo/Flag.png"
 import './Header.css'
-import Header2 from './Header2';
 import { Link, useNavigate } from 'react-router-dom';
 import { useGlobalAppContext } from '../context/AppContext';
 import {auth} from '../Firebase'
 import { signOut } from 'firebase/auth';
+import SearchFilter from './SearchFilter';
 
 const Header1 = () => {
     const navigate = useNavigate();
@@ -59,11 +58,7 @@ const Header1 = () => {
                         </span>
                 </div>
             </div>
-                <div className="header-search">
-                    <span className='header-all'>All</span>
-                    <input className='header-search-Input' type="text" placeholder='Search Amazon.in'/>
-                    <SearchIcon className='header-searchIcon' />
-                </div>         
+            <SearchFilter />
             <div className="header-nav">
                 <div className='header-option  nav-item'>
                 <div className='language'>

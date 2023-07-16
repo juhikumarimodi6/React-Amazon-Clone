@@ -9,7 +9,6 @@
 
 .home-carousel {
     margin-bottom: -20%;
-
 }
 
 .home-img {
@@ -18,15 +17,22 @@
     mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
     margin: auto;
 }
-
+.product-container {
+    display:grid;
+    margin-left: 20px;
+    margin-right: 20px;
+    grid-template-columns: auto auto auto auto;
+}
+.product-home {
+    padding: 2%;
+}
 .home-row {
     display: flex;
     margin-left: 20px;
     margin-right: 20px;
 }
-/* @media only screen and (min-width: 1800px) {
-    .home{
-        width: 80%;
-        margin: auto;
+@media only screen and (max-width: 800px) {
+    .product-container {
+        grid-template-columns: auto auto auto ;
     }
-} */
+}

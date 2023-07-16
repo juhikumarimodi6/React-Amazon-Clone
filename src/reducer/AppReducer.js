@@ -45,7 +45,6 @@ export const reducer = (state, action) => {
                         basket: [...state.basket],
                     }
                 case 'DECREASE-QUANTITY' :
-
                     state.basket.filter((item) => {
                         (item.id === action.payload) && (item.quantity = item.quantity - 1)
                     }) 
@@ -53,6 +52,11 @@ export const reducer = (state, action) => {
                         ...state, 
                         basketCount: state.basketCount - 1,
                         basket: [...state.basket],
+                    }
+                case 'PRODUCT_DATA' :
+                    return {
+                        ...state,
+                        products : action.payload,
                     }
 
                 default:

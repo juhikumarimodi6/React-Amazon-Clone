@@ -9,7 +9,7 @@ const Subtotal = () => {
         sum = sum + items.price *items.quantity;
     })
     return <p>Subtotal ({ContextState.basketCount} items):
-                <strong>₹{new Intl.NumberFormat('en-IN').format(`${sum}`)}</strong>
+                <strong>${new Intl.NumberFormat('en-IN').format(`${sum}`)}</strong>
             </p>
 }
 

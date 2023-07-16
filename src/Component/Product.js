@@ -2,7 +2,7 @@ import { useGlobalAppContext } from '../context/AppContext';
 import './Product.css'
 
 const Product = ({id, url, title, rating, price}) => {
-  const {ContextState, ContextDispatch} = useGlobalAppContext();
+  const {ContextDispatch} = useGlobalAppContext();
   const addToBasket = () => {
                   ContextDispatch({type: 'ADD_TO_CART',
                                     payload: {

@@ -33,7 +33,6 @@ const CheckoutProduct = () => {
                             </label>
                             <div className='checkout-product-quantity-container'>
                                 <div className='checkout-product-quantity'>
-                                    {/* Qty:{item.quantity}  */}
                                     <Counter 
                                         quantity = {item.quantity}
                                         id = {item.id}
@@ -49,7 +48,7 @@ const CheckoutProduct = () => {
                         </div>
                         <div className="checkout-product-info-right">
                         <p className="checkout-product-price">
-                            <strong>₹{new Intl.NumberFormat('en-IN').format(`${item.price}`)}</strong>
+                            <strong>${new Intl.NumberFormat('en-IN').format(`${item.price}`)}</strong>
                         </p>
                         </div>
                     </div>

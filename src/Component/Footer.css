@@ -8,20 +8,6 @@
     padding-top: 5vh;
 }
 
-.footer-heading {
-    margin:2vh;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-.email-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
 .footer-top {
     display: flex;
     margin: 0px auto;
@@ -48,6 +34,7 @@ li {
     color: rgb(247, 243, 243);
     align-items: flex-start;
     padding-left: 5vw;
+    font: size 1em;
 }
 
 h4 {
