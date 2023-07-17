@@ -63,7 +63,14 @@ export const reducer = (state, action) => {
                         ...state,
                         searchInput: action.payload,
                     }
-
+                case 'SAVE_FOR_LATER' :
+                    state.products.filter((item) => {
+                        (item.id === action.payload) && (item.saveForLater = true)
+                    })
+                    return{
+                        ...state,
+                        products: [...state.products],
+                    }
                 default:
                     return {...state};
             }

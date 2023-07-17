@@ -6,7 +6,8 @@
     font-size: 28x;
     display: flex;
     padding:20px;
-    margin:20px 40px;
-    max-width: 80vw;
+    margin:20px auto;
+    width: 80vw;
     box-sizing: border-box;
+    justify-content: center;
 }

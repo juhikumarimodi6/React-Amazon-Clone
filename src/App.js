@@ -8,6 +8,7 @@ import SignIn from './Component/SignIn';
 import SignUp from './Component/SignUp';
 import Footer from './Component/Footer';
 import Header1 from './Component/Header1';
+import Header from './Component/Header';
 
 function App() {
   const location = useLocation();
@@ -15,7 +16,7 @@ function App() {
   const showFooter = showHeader;
   return (
     <div>
-      {showHeader && <Header1 />}
+      {showHeader && <Header />}
       <Routes>
         <Route exact path='/' element={<Home />} />
         <Route path='/checkout' element={<Checkout />} />

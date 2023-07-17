@@ -1,7 +1,11 @@
 .header2-container {
     background-color: #232F3E;
     height:40px;
+    width:auto;
+    margin:0px;
+    padding:0px;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .header2 {

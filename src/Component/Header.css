@@ -1,6 +1,5 @@
 .header-container {
     min-width: 800px;
-    overflow: auto;
 }
 
 .header {
@@ -20,6 +19,7 @@
     width: 5vw;
     object-fit: contain;
     margin:0 1vw;
+    min-width:auto;
 }
 
 .nav-item {

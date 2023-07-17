@@ -11,6 +11,19 @@ const CheckoutProduct = () => {
                             payload: id,
                          })
     }
+
+    const handleSaveForLater = (id) => {
+        ContextDispatch({
+            type: 'SAVE_FOR_LATER',
+            payload: id,
+        })
+        ContextDispatch({
+            type: 'DELETE_FROM_CART',
+            payload: id,
+        })
+
+    }
+
   return (
     <div className='checkout-product'>
         {ContextState.basket.map((item) => {
@@ -39,7 +52,7 @@ const CheckoutProduct = () => {
                                 </div>
                                 <span className='amazon-size-small '>
                                     <a className='left-right-border amazon-color-link' onClick={() => deleteFromCart(item.id)}>Delete</a>
-                                    <a className='left-right-border amazon-color-link' > Save for later </a>
+                                    <a className='left-right-border amazon-color-link' onClick={() => handleSaveForLater(item.id)}> Save for later </a>
                                     <a className='left-right-border amazon-color-link' > See more like this </a>
                                     <a className='left-right-border amazon-color-link' > Share </a>
                                 </span>

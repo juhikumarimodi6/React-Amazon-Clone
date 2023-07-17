@@ -2,7 +2,6 @@ import React from 'react'
 // import Carousel from 'better-react-carousel'
 import './Home.css'
 import ImageCarousel from './ImageCarousel'
-import Header2 from './Header2'
 import Data from './TestData'
 import { useGlobalAppContext } from '../context/AppContext'
 import Products from './Products'
@@ -35,7 +34,6 @@ const Home = () => {
 
   return (
     <div className='home'>
-        <Header2 />
         <ImageCarousel />
         {ContextState.searchInput ? <ProductFilter /> : <Products />}
     </div>

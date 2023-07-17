@@ -40,9 +40,9 @@
 
 .starall {
     background-image: url("../Assets/GlobalImages/RatingImages.png");
-    background-position: -2px -42px;
-    height: 30px;
-    width: 160px;
+    background-position-x: -2px;
+    height: 34px;
+    width: 162px;
     scale:0.5;
     margin-left: 0px;
     position: relative;
