@@ -1,13 +1,22 @@
 .save-for-later-container {
-    height:10vh;
     font-family: "Amazon Ember",Arial,sans-serif;
     background-color: white;
+    box-sizing: border-box;
     font-weight: 400;
     font-size: 28x;
     display: flex;
     padding:20px;
     margin:20px auto;
-    width: 80vw;
-    box-sizing: border-box;
+    width: 95%;
     justify-content: center;
+    flex-direction: column;
+}
+
+hr {
+    color:#EAEDED;
+}
+
+.saveforlater-product {
+    border:0.5px #EAEDED solid;
+    margin: 2%;
 }

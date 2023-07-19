@@ -29,8 +29,8 @@ const Product = ({id, url, title, rating, price}) => {
   }
 
   const ratePosMap = {
-      '5' : '-2px', 
-      '4' : '-42px', '4.5': '-82px', 
+      '5': '-2px', 
+      '4': '-42px', '4.5': '-82px', 
       '3': '-122px', '3.5': '-162px', 
       '2': '-202px', '2.5': '-242px', 
       '1': '-282px', '1.5': '-322px',
@@ -47,7 +47,7 @@ const Product = ({id, url, title, rating, price}) => {
                 <p className='starall' style={{backgroundPositionY: `${rateMapValue(rating)}`}}></p> 
             </div>
             <p className="product-price">
-                <sup><small>₹</small></sup>
+                <sup><small>$</small></sup>
                 <strong>{new Intl.NumberFormat('en-IN').format(price)}</strong>
             </p>
         </div>

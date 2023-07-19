@@ -16,10 +16,11 @@
 }
 
 .header-logo {
-    width: 5vw;
+    width: 8vw;
     object-fit: contain;
     margin:0 1vw;
     min-width:auto;
+    /* border: solid; */
 }
 
 .nav-item {

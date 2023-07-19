@@ -12,7 +12,7 @@ const CheckoutProduct = () => {
                          })
     }
 
-    const handleSaveForLater = (id) => {
+    const handleSaveForLater = (id, item) => {
         ContextDispatch({
             type: 'SAVE_FOR_LATER',
             payload: id,
@@ -21,7 +21,10 @@ const CheckoutProduct = () => {
             type: 'DELETE_FROM_CART',
             payload: id,
         })
-
+        ContextDispatch({
+            type:'ADD_SAVEFORLATER_ITEM',
+            payload:item,
+        })
     }
 
   return (
@@ -30,7 +33,7 @@ const CheckoutProduct = () => {
             return (
                 <div>
                 <div className="checkout-product-container">
-                    <img src={item.image} alt="JBL earpiece" />
+                    <img src={item.image} alt="item" />
                     <div className="checkout-product-info">
                         <div className="checkout-product-info-left">
                             <p className="checkout-product-title">
@@ -52,7 +55,7 @@ const CheckoutProduct = () => {
                                 </div>
                                 <span className='amazon-size-small '>
                                     <a className='left-right-border amazon-color-link' onClick={() => deleteFromCart(item.id)}>Delete</a>
-                                    <a className='left-right-border amazon-color-link' onClick={() => handleSaveForLater(item.id)}> Save for later </a>
+                                    <a className='left-right-border amazon-color-link' onClick={() => handleSaveForLater(item.id, item)}> Save for later </a>
                                     <a className='left-right-border amazon-color-link' > See more like this </a>
                                     <a className='left-right-border amazon-color-link' > Share </a>
                                 </span>

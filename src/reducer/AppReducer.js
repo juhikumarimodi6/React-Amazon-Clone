@@ -1,6 +1,7 @@
 export const initialState = {
             basketCount : 0,
             basket : [],
+            saveForLaterItem: [],
         };
 
 export const reducer = (state, action) => {
@@ -67,9 +68,15 @@ export const reducer = (state, action) => {
                     state.products.filter((item) => {
                         (item.id === action.payload) && (item.saveForLater = true)
                     })
-                    return{
+                    return {
                         ...state,
                         products: [...state.products],
+                    }
+                case 'ADD_SAVEFORLATER_ITEM' :
+                    state.saveForLaterItem.push(action.payload)
+                    return {
+                        ...state,
+                        saveForLaterItem: [...state.saveForLaterItem],
                     }
                 default:
                     return {...state};

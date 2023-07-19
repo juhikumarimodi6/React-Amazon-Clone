@@ -13,7 +13,6 @@ import { signOut } from 'firebase/auth';
 const Header1 = () => {
     const navigate = useNavigate();
     const {ContextState, ContextDispatch} = useGlobalAppContext();
-    console.log(ContextDispatch)
     const [username, setUserName] = useState("");
 
     useEffect(() => {

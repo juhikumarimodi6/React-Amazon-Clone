@@ -22,10 +22,8 @@
         })
     }
 
-    // console.log(ContextState)
-
     return (
-            <div tabindex="0" className="header-search">
+            <div tabIndex="0" className="header-search">
                 <form className={`search-form ${isFocussed ? 'focussed' : ''}`}>
                     <button className='header-all'>All</button>
                     <input 
