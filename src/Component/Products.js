@@ -6,16 +6,11 @@ const Products = () => {
     const {ContextState} = useGlobalAppContext();
     return (
         <div className='product-container'>
-            {ContextState.products && ContextState.products.map((item) => {
-                const {category, description, id, image, price, rating, title } = item;
+            {ContextState.products && ContextState.products.map((item, index) => {
                 return <div className='product-home'>
                             <Product
-                                key = {id}
-                                id = {id}
-                                url = {image}
-                                title = {title}
-                                rating = {rating.rate}
-                                price = {price}
+                                key = {index}
+                                item = {item}
                             />
                         </div>
             })}

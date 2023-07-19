@@ -1,29 +1,46 @@
 import React from 'react'
+import AmazonFulfilled from '../Assets/Logo/amazon-fulfilled.png'
+import './SaveForLaterCard.css'
+import { useGlobalAppContext } from '../context/AppContext'
 
-const SaveForLaterCard = () => {
+const SaveForLaterCard = ({item}) => {
+    const {id, image, price, title, quantity} = item;
+
+    const {ContextDispatch} = useGlobalAppContext();
+
+    const deleteItem = () => {
+        ContextDispatch({
+            type: 'DELETE_SAVEFORLATER_ITEM',
+            payload: id,
+        })
+    }
+
+    const moveToCart = () => {
+        ContextDispatch({type: 'ADD_TO_CART',
+                            payload: {...item},
+                        });
+        ContextDispatch({
+            type: 'DELETE_SAVEFORLATER_ITEM',
+            payload: id,
+        })
+        ContextDispatch({
+            type: 'INCREASE_BASKETCOUNT',
+            payload: quantity,
+        })
+    }
+
   return (
-    <div className="checkout-product-container">
-        <img src={item.image} alt="item" />
-        <div className="checkout-product-info">
-            <div className="checkout-product-info-left">
-                <p className="checkout-product-title">
-                   {item.title}
-                </p>
-                <strong>${new Intl.NumberFormat('en-IN').format(`${item.price}`)}</strong>
-                <span className='amazon-color-success amazon-size-small'>In stock</span>
-                <span className='amazon-size-small amazon-color-secondary delivery-message'>Eligible for FREE Shipping</span>
-                <img src={AmazonFulfilled} alt="AmazonFulfilled" className='amazon-fulfilled' />
-                <button>Move to cart</button>
-                <div className='checkout-product-quantity-container'>
-                    <span className='amazon-size-small '>
-                        {/* <a className='left-right-border amazon-color-link' onClick={() => deleteFromList(item.id)}>Delete</a> */}
-                        <a className='left-right-border amazon-color-link' >Delete</a>
-                        <a className='left-right-border amazon-color-link' > Add to list </a>
-                        <a className='left-right-border amazon-color-link' > See more like this </a>
-                    </span>
-                </div>
-            </div>
-        </div>
+    <div className="saveForLater-product-container">
+        <img src={image} alt="item" className='saveForLater-product-image'/>
+        <p className="saveForLater-product-title">{title}</p>
+        <strong>${new Intl.NumberFormat('en-IN').format(`${price}`)}</strong>
+        <span className='amazon-color-success amazon-size-small'>In stock</span>
+        <span className='amazon-size-small amazon-color-secondary delivery-message'>Eligible for FREE Shipping</span>
+        <img src={AmazonFulfilled} alt="AmazonFulfilled" className='amazon-fulfilled' />
+        <button className='move-to-cart' onClick={() => moveToCart()}>Move to cart</button>
+        <a className='amazon-color-link amazon-size-small' onClick={() => deleteItem()} >Delete</a>
+        <a className='amazon-color-link amazon-size-small' > Add to list </a>
+        <a className='amazon-color-link amazon-size-small' > See more like this </a>
     </div>
   )
 }

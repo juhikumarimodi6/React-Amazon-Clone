@@ -3,13 +3,16 @@ import { useGlobalAppContext } from "../context/AppContext";
 import { MdDelete } from "react-icons/md";
 
     const Counter = ({quantity, id}) => {
-    const {ContextState, ContextDispatch} = useGlobalAppContext();
-    // console.log(ContextState.basket)
+    const {ContextDispatch} = useGlobalAppContext();
 
     const handleIncrement = (id) => {
         ContextDispatch({
             type:'INCREASE-QUANTITY',
             payload: id,
+        })
+        ContextDispatch({
+            type:'INCREASE_BASKETCOUNT',
+            payload: 1,
         })
     }
 

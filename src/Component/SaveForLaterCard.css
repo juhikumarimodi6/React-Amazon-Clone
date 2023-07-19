@@ -1,0 +1,33 @@
+.saveForLater-product-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-sizing: border-box;
+    border:0.5px #EAEDED solid;
+    margin: 1%;
+    padding:1%;
+    width:13vw;
+}
+
+.saveForLater-product-image{
+    box-sizing: border-box;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.saveForLater-product-title {
+    box-sizing: border-box;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Adjust the number of lines to your preference */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height:2.4em;
+    margin:1% 0px;
+}
+
+.move-to-cart {
+    margin:2% 0px;
+}

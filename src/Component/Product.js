@@ -1,18 +1,23 @@
 import { useGlobalAppContext } from '../context/AppContext';
 import './Product.css'
 
-const Product = ({id, url, title, rating, price}) => {
+const Product = ({item}) => {
+  const {category, description, id, image, price, rating, title } = item;
   const {ContextDispatch} = useGlobalAppContext();
   const addToBasket = () => {
                   ContextDispatch({type: 'ADD_TO_CART',
                                     payload: {
                                         id: id,
-                                        image: url,
+                                        image: image,
                                         title: title,
                                         price: price,
                                         quantity: 1,
                                         rating: rating,
                                       }});
+                  ContextDispatch({
+                    type: 'INCREASE_BASKETCOUNT',
+                    payload: 1,
+                  })
   }
 
   const rateMapValue = (rating) => {
@@ -39,7 +44,7 @@ const Product = ({id, url, title, rating, price}) => {
 
   return (
     <div className='product'>
-        <img src={url} alt="phone" className="product-image" />
+        <img src={image} alt="phone" className="product-image" />
         <div className='product-info'>
             <p className='product-title'>{title}</p>
             <div className="product-rating">

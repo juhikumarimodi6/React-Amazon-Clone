@@ -21,7 +21,6 @@ export const reducer = (state, action) => {
                     }
                     return {
                         ...state,
-                        basketCount: state.basketCount + 1,
                         basket: [...state.basket],
                     }
                 case 'DELETE_FROM_CART' :
@@ -42,7 +41,6 @@ export const reducer = (state, action) => {
                     }) 
                     return {
                         ...state, 
-                        basketCount: state.basketCount + 1,
                         basket: [...state.basket],
                     }
                 case 'DECREASE-QUANTITY' :
@@ -77,6 +75,16 @@ export const reducer = (state, action) => {
                     return {
                         ...state,
                         saveForLaterItem: [...state.saveForLaterItem],
+                    }
+                case 'DELETE_SAVEFORLATER_ITEM' :
+                    return {
+                        ...state,
+                        saveForLaterItem: state.saveForLaterItem.filter((item) => item.id !== action.payload)
+                    }
+                case 'INCREASE_BASKETCOUNT' :
+                    return {
+                        ...state,
+                        basketCount: state.basketCount + action.payload,
                     }
                 default:
                     return {...state};
