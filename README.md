@@ -10,8 +10,7 @@ This is a React-based Amazon Clone web application built to showcase my skills a
 
 A video showcasing the Amazon Clone Web Application in action.
 
-
-https://github.com/juhikumarimodi6/React-Amazon-Clone/assets/71226446/ed70f5fd-0c37-43a3-9729-5da726bab32f
+https://github.com/juhikumarimodi6/React-Amazon-Clone/assets/71226446/7a6daba8-1627-4c39-9443-668e1273c0c1
 
 
 ## Technologies Used
