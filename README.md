@@ -2,7 +2,17 @@
 
 This is a React-based Amazon Clone web application built to showcase my skills as a frontend developer. The project aims to replicate some of the core functionalities of the popular e-commerce platform Amazon. It utilizes technologies such as Firebase for user authentication, along with HTML, CSS, and React Hooks (useState, useContext, useReducer) for building a seamless user interface.
 
+## Screenshots
+
   ![Screenshot 1](amazon1.PNG)
+
+## Demo Video 
+
+A video showcasing the Amazon Clone Web Application in action.
+
+
+https://github.com/juhikumarimodi6/React-Amazon-Clone/assets/71226446/ed70f5fd-0c37-43a3-9729-5da726bab32f
+
 
 ## Technologies Used
 
@@ -50,9 +60,6 @@ To run the Amazon Clone Web Application locally on your machine, follow these st
 
 This project serves as a demonstration of my frontend development skills and proficiency in working with modern web technologies such as React, Firebase, HTML, and CSS. Feel free to explore the source code and functionalities. I built this project to further solidify my understanding of React Hooks (useState, useContext, useReducer), and API fetch.
 
-## Demo Video and Screenshots
-
-- [**Demo Video**](Amazon-demo-video2.mp4): A video showcasing the Amazon Clone Web Application in action.
 
 ## Contributions
 
